@@ -1,21 +1,24 @@
 # DevOps / SRE Task
 
 ### Premisses:
-- Use Terraform as IaaC.
+- Use Terraform as IaaC. Must follow the terraform best practices.
 - Use Ansible to configure host services.
-- Use the smallest instances; it could be the free tier, don’t worry.
+- Use the smallest instances; free tier is encouraged but not mandatory.
 - Docker logs must be delivered to Cloudwatch.
 - Deliver it to a git repository (Github for example).
 - Provide a README.md with instructions to reproduce.
-- Please, include to the README.md how did you come with the solution (Google, Book, Manual, Stackoverflow). The source of your information is welcome.
-
+- Please, include to the README.md how did you come up with the solution (Google, Book, Manual, Stackoverflow). The source of your information is welcome.
+- Please ensure that you can explain the steps followed and the reasoning behind the technical decisions made. We discourage the use of generative AI for this task, as the purpose is to evaluate your thought process and understanding.
+ 
 ### What to deliver:
 **Using Terraform:**
 ```
 - VPC 10.161.0.0/24.
-- 3 Subnets: 1 per availability zone.
-- 3 EC2 instances.
-- ALB serving port 80 on each instance.
+- Adjust subnets and networking following best practices.
+- 3 EC2 instances without public access.
+- 1 EC2 instance for jumphost (bastion host) to access the other instances.
+- ALB serving port 80 on each instance with healthchecks.
+- Create the relevant IAM roles and permissions for EC2 and Cloudwatch access.
 ```
 
 **Using Ansible:**
