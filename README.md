@@ -6,9 +6,10 @@
 - Use the smallest instances; free tier is encouraged but not mandatory.
 - Docker logs must be delivered to Cloudwatch.
 - Deliver it to a git repository (Github for example).
-- Provide a README.md with instructions to reproduce.
 - Please, include to the README.md how did you come up with the solution (Google, Book, Manual, Stackoverflow). The source of your information is welcome.
 - Please ensure that you can explain the steps followed and the reasoning behind the technical decisions made. We discourage the use of generative AI for this task, as the purpose is to evaluate your thought process and understanding.
+
+- Provide a **README.md** with instructions to reproduce.
  
 ### What to deliver:
 **Using Terraform:**
